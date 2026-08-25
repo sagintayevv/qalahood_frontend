@@ -1,21 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { productService } from "@/services/product.service";
-import { Product } from "@/types/product";
+import { useGetProductsQuery } from "@/store/api/productApi";
 
 export default function Home() {
-  const [products, setProducts] = useState<Product[]>([]);
+  const { data: products, isLoading, error } = useGetProductsQuery();
 
-  useEffect(() => {
-    productService.getAll().then(setProducts);
-  }, []);
+  if (isLoading) {
+    return <p>Загрузка...</p>;
+  }
 
-  return (
-    <div>
-      {products.map((product) => (
-        <div key={product.id}>{product.title}</div>
-      ))}
-    </div>
-  );
+  if (error) {
+    return <p>Ошибка при загрузке товаров</p>;
+  }
+
+  return <pre>{JSON.stringify(products, null, 2)}</pre>;
 }
