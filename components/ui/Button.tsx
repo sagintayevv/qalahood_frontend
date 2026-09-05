@@ -19,7 +19,7 @@ export function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`px-4 py-2 rounded-md font-medium transition-colors ${variantClasses[variant]} ${className}`}
+      className={`px-4 py-2 font-medium transition-colors ${variantClasses[variant]} ${className}`}
       {...props}
     />
   );

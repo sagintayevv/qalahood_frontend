@@ -17,9 +17,9 @@ export function Header() {
           <img src="/qalahood-logo.svg" alt="Qalahood" className="h-8 w-auto" />
         </Link>
 
-        <nav className="hidden lg:flex  items-center gap-6">
+        <nav className="hidden lg:flex  items-center gap-6 ">
           <CategoriesPopover />
-          <Link href="/custom" className=" flex items-center gap-2">
+          <Link href="/custom" className=" flex items-center gap-2 text-sm">
             Создать мерч
             <span className="bg-blue-500 text-gray-200 text-xs px-2 py-0.5 rounded-full">
               NEW

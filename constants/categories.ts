@@ -12,7 +12,12 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "2",
-    title: "T-shirts",
+    title: "Футболки",
     slug: "t-shirts",
+  },
+  {
+    id: "3",
+    title: "Свитшоты",
+    slug: "swetears",
   },
 ];
